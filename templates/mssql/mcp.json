@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "mssql-dba-mcp": {
+      "command": "npx",
+      "args": ["-y", "@shadow-dba/mssql-dba-mcp@0.1"]
+    }
+  }
+}
