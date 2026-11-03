@@ -1,0 +1,39 @@
+{
+  "name": "shadow-dba",
+  "version": "0.1.0",
+  "description": "Scaffold a Claude Code DBA workspace for SQL Server (skills, subagent, read-only MCP config) in one command.",
+  "author": "shadow-dba",
+  "license": "MIT",
+  "homepage": "https://github.com/shadow-dba/shadow-dba-cli#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shadow-dba/shadow-dba-cli.git"
+  },
+  "bugs": {
+    "url": "https://github.com/shadow-dba/shadow-dba-cli/issues"
+  },
+  "bin": {
+    "shadow-dba": "bin/cli.js"
+  },
+  "files": [
+    "bin",
+    "src",
+    "templates"
+  ],
+  "scripts": {
+    "test": "node --test"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "keywords": [
+    "claude",
+    "dba",
+    "mssql",
+    "mcp",
+    "scaffold",
+    "cli",
+    "sql-server",
+    "claude-code"
+  ]
+}
