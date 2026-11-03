@@ -1,14 +1,24 @@
 # Changelog
 
-## 0.1.0 (unreleased)
+## 0.2.0
+
+- New command names: `shadow-dba harness` creates a workspace and `shadow-dba harness update`
+  merges newer templates. `workspace init`, `workspace update` and `app` are removed.
+  Bare `shadow-dba` and `shadow-dba update` still work.
+- The interactive installer offers to overwrite a workspace folder that already exists.
+- DOCS.html follows the brand kit: brand colors, IBM Plex Sans type scale, the brand logo and
+  favicon. The workflow example is named "instance risk audit", like the skill.
+- New logo in the README.
+
+## 0.1.0 (2026-10-20)
 
 First public release.
 
-- `shadow-dba harness`: creates a Claude Code DBA workspace for SQL Server
+- `shadow-dba workspace init`: creates a Claude Code DBA workspace for SQL Server
   (`--name`, `--engine mssql`, `--no-open`). Bare `shadow-dba` still works.
-- `shadow-dba harness update`: 3-way merges newer templates into a workspace and keeps your edits.
+- `shadow-dba workspace update`: 3-way merges newer templates into a workspace and keeps your edits.
   `shadow-dba update` still works.
-- `shadow-dba agent`: placeholder for the server app.
+- `shadow-dba app`: placeholder for the server app.
 - Skills: instance-risk-audit, performance-audit, exec-plan-analysis, index-tuning, backup-audit,
   schema-review. Subagent: exec-plan-analyst.
 - The MCP server starts with `npx -y @shadow-dba/mssql-dba-mcp@0.1` and reads `.env` itself

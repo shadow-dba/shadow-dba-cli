@@ -56,7 +56,6 @@ and both projects are open source.
 |---|---|
 | `npx shadow-dba harness` | Create a workspace. Options: `--name <folder>`, `--engine mssql`, `--no-open` |
 | `npx shadow-dba@latest harness update` | Merge newer skills into an existing workspace; your own edits are kept |
-| `npx shadow-dba agent` | The shadow-dba server app (coming soon) |
 
 Short forms: `npx shadow-dba` = `harness`, `npx shadow-dba update` = `harness update`.
 Requires Node.js 20 or newer. SQL Server only for now; Postgres is planned.

@@ -11,19 +11,19 @@ const { parseArgs, writeWorkspace } = require('../src/scaffold');
 const { findWorkspace } = require('../src/update');
 const { STATE_FILE } = require('../src/manifest');
 
-test('harness [update], agent and the short aliases route to the same commands', () => {
+test('harness [update] and the short aliases route to the same commands', () => {
   assert.deepStrictEqual(route(['harness', '--name', 'x']), { cmd: 'init', args: ['--name', 'x'] });
   assert.deepStrictEqual(route(['harness']), { cmd: 'init', args: [] });
   assert.deepStrictEqual(route(['--name', 'x']), { cmd: 'init', args: ['--name', 'x'] });
   assert.deepStrictEqual(route([]), { cmd: 'init', args: [] });
   assert.deepStrictEqual(route(['harness', 'update', '-y']), { cmd: 'update', args: ['-y'] });
   assert.deepStrictEqual(route(['update', '-y']), { cmd: 'update', args: ['-y'] });
-  assert.deepStrictEqual(route(['agent', 'init']), { cmd: 'agent', args: ['init'] });
   assert.strictEqual(route(['--help']).cmd, 'help');
   assert.deepStrictEqual(route(['harness', '--help']), { cmd: 'init', args: ['--help'] });
   assert.throws(() => route(['harness', 'nope']), /Unknown command/);
   assert.throws(() => route(['workspace', 'init']), /Unknown command/);
   assert.throws(() => route(['app']), /Unknown command/);
+  assert.throws(() => route(['agent']), /Unknown command/);
 });
 
 test('--engine accepts mssql only for now', () => {

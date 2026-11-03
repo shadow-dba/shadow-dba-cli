@@ -2,7 +2,7 @@
 'use strict';
 
 const { stdout, stdin, stderr } = require('node:process');
-const { route, HELP, AGENT_TEXT } = require('../src/cli');
+const { route, HELP } = require('../src/cli');
 const { scaffold, parseArgs } = require('../src/scaffold');
 
 // Restore the cursor if we bail out mid-animation (Ctrl-C, etc.).
@@ -37,9 +37,6 @@ async function main() {
   switch (cmd) {
     case 'help':
       stdout.write(HELP);
-      return 0;
-    case 'agent':
-      stdout.write(AGENT_TEXT);
       return 0;
     case 'update':
       return require('../src/update').update(args);

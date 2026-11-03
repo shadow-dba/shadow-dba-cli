@@ -1,6 +1,6 @@
 {
   "name": "shadow-dba",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Scaffold a Claude Code DBA workspace for SQL Server (skills, subagent, read-only MCP config) in one command.",
   "author": "shadow-dba",
   "license": "MIT",
